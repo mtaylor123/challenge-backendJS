@@ -4,7 +4,7 @@ const { logger } = require('../utils/logger');
 const listenMock = require('../mock-server');
 
 
-// circuit breaker configss
+// circuit breaker configs
 const breaker = {
   state: 'closed', // closed | open | half
   fails: [],
@@ -62,6 +62,7 @@ async function tryRequest(url, opts) {
     }
   }
 }
+
 
 
 const BASE_URL = process.env.EXTERNAL_BASE_URL || 'http://event.com';
